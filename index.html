@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="css/styles.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -11,7 +10,7 @@
 		<title>Hello, world!</title>
 	</head>
 
-	<body >
+	<body>
 		<div class="container">
 			<div class="row">
 				<div id="content" class="col-12 mt-4 pt-4 mb-4 pb-4">
@@ -33,14 +32,16 @@
 
 				console.log(data); // What data do we get back?
 
-				// Do something with your data
+				// Now do something with your data
 				let html = "";
 				data.forEach( item => {
+
+					// html += "<h1>" + item.title + "</h1>"; // Smaller Example
 					html += "" +
 						"<div class='card m-4'>" +
 							"<img src='" + item.img + "' class='card-img-top'>" +
 							"<div class='card-body'>" +
-								"<h1>" + item.title + "<h1>" + 
+								"<h1>" + item.title + "</h1>" + 
 								"<h5>" + item.subtitle + "</h5>" + 
 								"<p>" + item.post + "</p>" + 
 							"</div>" +
