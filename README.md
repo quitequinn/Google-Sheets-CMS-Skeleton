@@ -4,7 +4,7 @@ We use [Papa Parse](https://www.papaparse.com/) to link our spreadsheet to the w
 
 ## The Basic Setup
 
-Make a [Google Spreadsheet](http://drive.google.com). Give it some column headers, give it some content.
+Make a [Google Spreadsheet](http://drive.google.com). Give it some column headers, give it some content. Please makesure to use a private account, not an organizational one (eg. NOT your ECUAD email).
 
     Name                Category         Healthiness 
     Carrot              Vegetable        Adequate
