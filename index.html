@@ -22,37 +22,38 @@
 
 
   <!-- Using Google Sheet as Database -->
-	<script src="https://cdn.jsdelivr.net/npm/tabletop@1.6.2/src/tabletop.min.js"></script>
-	<script type="text/javascript">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+  <script type="text/javascript">
 		function init() {
-			Tabletop.init( {
-				key: 'https://docs.google.com/spreadsheets/d/1hTpSSKisKsCSAq71nyeUztwPOyFMOpSRxpZsy0upPlI/edit?usp=sharing',
-				simpleSheet: true 
-			} ).then(function(data, tabletop) { 
 
-				console.log(data); // What data do we get back?
+         Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vQRjCK4PfiSWsRfFrE8qhFY9qjP0WZaTuDZ_DV-D3ph8WbTAyjmOBLyNJIgTEy8treec_bjqiGc7huc/pub?output=csv', {
+            download: true,
+            header: true,
+            complete: function(results) {
 
-				// Now do something with your data
-				let html = "";
-				data.forEach( item => {
+               console.log(results.data); // What data do we get back?
 
-					// html += "<h1>" + item.title + "</h1>"; // Smaller Example
-					html += "" +
-						"<div class='card m-4'>" +
-							"<img src='" + item.img + "' class='card-img-top'/>" +
-							"<div class='card-body'>" +
-								"<h1>" + item.title + "</h1>" + 
-								"<h5>" + item.subtitle + "</h5>" + 
-								"<p>" + item.post + "</p>" + 
-							"</div>" +
-							"<div class='card-footer text-muted'>" +
-								"<span>" + item.date + "</span>" + 
-							"</div>" +
-						"</div>" +
-					"";
-				});
-				document.getElementById("content").innerHTML = html;
+               // Now do something with your data
+               let html = "";
+               results.data.forEach( item => {
 
+                  // html += "<h1>" + item.title + "</h1>"; // Smaller Example
+                  html += "" +
+                     "<div class='card m-4'>" +
+                        "<img src='" + item.img + "' class='card-img-top'/>" +
+                        "<div class='card-body'>" +
+                           "<h1>" + item.title + "</h1>" + 
+                           "<h5>" + item.subtitle + "</h5>" + 
+                           "<p>" + item.post + "</p>" + 
+                        "</div>" +
+                        "<div class='card-footer text-muted'>" +
+                           "<span>" + item.date + "</span>" + 
+                        "</div>" +
+                     "</div>" +
+                  "";
+               });
+               document.getElementById("content").innerHTML = html;
+            }
 			})
 		}
 		window.addEventListener('DOMContentLoaded', init)
