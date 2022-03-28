@@ -24,5 +24,12 @@ Now that you've published your sheet, grab the link provided and use it in your 
 <img width="538" alt="Screen Shot 2022-03-28 at 9 21 56 AM" src="https://user-images.githubusercontent.com/2885870/160443293-352fa863-daa4-4d77-b4b0-d2746d6ae110.png">
 <img width="734" alt="Screen Shot 2022-03-28 at 9 23 44 AM" src="https://user-images.githubusercontent.com/2885870/160443394-ef90cc35-91c2-4219-8a9a-db0c2ca37ad1.png">
 
+The last step is that you need a server to retieve the data. That can be anything you want it to be, but for the purposes of this example we are just going to start MAMP.
 
-Now you should be able to retrieve all the data in your Google sheet as use it as you want.
+<img width="604" alt="Screen Shot 2022-03-28 at 9 25 27 AM" src="https://user-images.githubusercontent.com/2885870/160443720-6a596d58-df4f-432f-bb41-cf42ae457b2e.png">
+
+
+Now you should be able to retrieve all the data in your Google sheet as use it as you want. Just go to your MAMP root and select the project.
+
+<img width="783" alt="Screen Shot 2022-03-28 at 9 28 18 AM" src="https://user-images.githubusercontent.com/2885870/160444177-b542037a-d280-4553-b78d-2e1347e41674.png">
+
